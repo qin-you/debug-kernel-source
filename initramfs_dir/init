@@ -1,0 +1,8 @@
+#!/bin/busybox sh
+
+/bin/busybox mkdir -p /proc && /bin/busybox mount -t proc none /proc
+export PS1='(yq@qemu)=> '
+busybox echo "Hello, this is the first process init:"
+/bin/busybox echo ""
+/bin/busybox cat init
+/bin/busybox sh
